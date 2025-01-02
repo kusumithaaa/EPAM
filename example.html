@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Example</title>
+</head>
+<body>
+    <header>
+        <h1>HTML5 Features</h1>
+    </header>
+    
+    <section>
+        <h2>Audio Example</h2>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <section>
+        <h2>Canvas Example</h2>
+        <canvas id="myCanvas" width="200" height="200"></canvas>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(50, 50, 150, 150);
+        </script>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 HTML5 Demo</p>
+    </footer>
+</body>
+</html>

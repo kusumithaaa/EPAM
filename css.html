@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics and Layouts</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content Layout (Flexbox) */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .content {
+            width: 70%;
+            background-color: #fff;
+            padding: 20px;
+            margin-right: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar {
+            width: 25%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Box Styling */
+        .box {
+            width: 100%;
+            height: 150px;
+            background-color: #FF6347;
+            margin: 20px 0;
+            color: white;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 24px;
+            border-radius: 8px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .box:hover {
+            transform: scale(1.1);
+        }
+
+        /* Grid Layout Example */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .grid-item {
+            background-color: #FF9800;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content, .sidebar {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Welcome to Front End Development (EPAM)</h1>
+        <p>Learn CSS Basics and Layouts Taught By Dr. Pavan Kumar Pagadala</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content (Flexbox Layout) -->
+    <div class="main-content">
+        <!-- Content Area -->
+        <div class="content">
+            <h2>Main Content Area</h2>
+            <p>This area contains the main content of the webpage. Here you can add text, images, or other media.</p>
+            <div class="box">Hover over me!</div>
+        </div>
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Sidebar</h3>
+            <p>This is a sidebar with related content, links, or advertisements.</p>
+        </div>
+    </div>
+
+    <!-- Grid Layout Example -->
+    <div class="grid-container">
+        <div class="grid-item">Grid Item 1</div>
+        <div class="grid-item">Grid Item 2</div>
+        <div class="grid-item">Grid Item 3</div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved by EPAM FSD Team.</p>
+    </footer>
+
+</body>
+</html>
