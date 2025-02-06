@@ -1,0 +1,16 @@
+a[href^"http://"]
+{
+color: red;
+}
+/* If link ends with ".com" */
+a[href$=".com"] {
+background: #fc0;
+}
+/* If link contains "google" */
+[href *= "google"] {
+background: yellow;
+}
+/* One of the several attribute values */
+[title ~= "block"] {
+color: green;
+}
