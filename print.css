@@ -1,0 +1,32 @@
+/* General Styles for Printing */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    color: black;
+    background: none; /* Remove background colors or images */
+    margin: 1in; /* Add a margin for printed pages */
+}
+
+/* Remove unnecessary elements (if any) */
+header, footer, nav, .no-print {
+    display: none; /* Hide headers, navigation bars, and elements with class "no-print" */
+}
+
+/* Style for Paragraphs */
+p {
+    font-size: 12pt;
+    line-height: 1.5; /* Improve readability with line spacing */
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: black; /* Ensure headings are visible in black */
+    page-break-before: avoid; /* Avoid breaking pages before headings */
+}
+
+/* Page Breaks */
+@media print {
+    .page-break {
+        page-break-before: always; /* Add manual page breaks where needed */
+    }
+}
